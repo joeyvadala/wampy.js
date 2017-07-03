@@ -15,6 +15,7 @@ import { Wampy } from './../src/wampy';
 import { JsonSerializer } from '../src/serializers/JsonSerializer';
 import { MsgpackSerializer } from './../src/serializers/MsgpackSerializer';
 import { BadSerializer } from './BadSerializer';
+import { ThrowExSerializer } from './ThrowExSerializer';
 import { WAMP_ERROR_MSG } from './../src/constants';
 
 describe('Wampy.js Constructor', function () {
