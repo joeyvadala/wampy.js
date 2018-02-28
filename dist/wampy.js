@@ -598,8 +598,9 @@ var Wampy = function () {
                 // Server have chosen not our preferred protocol
 
                 // Falling back to json if possible
-                console.log("SERIALIZER SERVER PROTOCOL: ", serverProtocol, this._options.serializer.protocol)
-                if (serverProtocol.includes('json')) {
+                console.log("SERIALIZER SERVER PROTOCOL: -", serverProtocol, "-")
+                console.log("SERIALIZER LOCAL PROTOCOL: ", this._options.serializer.protocol)
+                if (serverProtocol.includes('json') || serverProtocol === "") {
                     this._options.serializer = new _JsonSerializer.JsonSerializer();
                 } else {
                     this._cache.opStatus = _constants.WAMP_ERROR_MSG.NO_SERIALIZER_AVAILABLE;
